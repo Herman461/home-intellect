@@ -514,26 +514,50 @@ if (spoilersArray.length > 0) {
   }
 }
 
-var productsSlider = new Swiper('.products__slider', {
-  speed: 800,
-  loop: true,
-  spaceBetween: 40,
-  slidesPerView: 1.5,
-  navigation: {
-    prevEl: '.products__button-prev',
-    nextEl: '.products__button-next'
-  },
-  breakpoints: {
-    1279: {
-      slidesPerView: 5,
-      spaceBetween: 82
+if (document.querySelector('.products__slider')) {
+  var productsSlider = new Swiper('.products__slider', {
+    speed: 800,
+    loop: true,
+    spaceBetween: 40,
+    slidesPerView: 1.5,
+    navigation: {
+      prevEl: '.products__button-prev',
+      nextEl: '.products__button-next'
     },
-    600: {
-      slidesPerView: 3,
-      spaceBetween: 50
+    breakpoints: {
+      1279: {
+        slidesPerView: 5,
+        spaceBetween: 82
+      },
+      600: {
+        slidesPerView: 3,
+        spaceBetween: 50
+      }
     }
-  }
-});
+  });
+}
+
+if (document.querySelector('.main-slider__slider')) {
+  var mainSlider = new Swiper('.main-slider__slider', {
+    speed: 800,
+    loop: true,
+    spaceBetween: 30,
+    pagination: {
+      el: ".main-slider__pagination"
+    } // breakpoints: {
+    //     1279: {
+    //         slidesPerView: 5,
+    //         spaceBetween: 82,
+    //     },
+    //     600: {
+    //         slidesPerView: 3,
+    //         spaceBetween: 50,
+    //     },
+    // }
+
+  });
+}
+
 var iconMenu = document.querySelector('.icon-menu');
 
 if (iconMenu) {
