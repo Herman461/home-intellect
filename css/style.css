@@ -628,6 +628,8 @@ svg {
 
 .header {
   background: #FAFAFA;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .header__container {
@@ -648,6 +650,16 @@ svg {
   flex: 1 1 auto;
 }
 
+.menu__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__label {
+  padding-top: 20px;
+}
+
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -661,6 +673,7 @@ svg {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-weight: 500;
 }
 
 .menu__link span {
@@ -731,7 +744,6 @@ svg {
   border-top-left-radius: 72px;
   background: linear-gradient(90.59deg, #3FEBFF 0.19%, #C600D3 50.02%, #FF1563 99.85%);
   padding: 71px 72px;
-  min-height: 680px;
   position: relative;
   overflow: hidden;
 }
@@ -787,8 +799,8 @@ svg {
 .intro__image_second {
   bottom: 30px;
   z-index: 4;
-  -webkit-transform: translate(350%, 0);
-  transform: translate(350%, 0);
+  -webkit-transform: translate(328%, 0);
+  transform: translate(328%, 0);
 }
 
 .intro__image_second img {
@@ -949,6 +961,10 @@ svg {
   padding-top: 32px;
 }
 
+.brands__container {
+  max-width: 1020px;
+}
+
 .brands__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1024,7 +1040,6 @@ svg {
 .faq__item {
   background: #FFFFFF;
   border-radius: 24px;
-  padding: 32px;
   margin-bottom: 24px;
 }
 
@@ -1040,6 +1055,8 @@ svg {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 42px;
   flex: 0 0 42px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   width: 42px;
   height: 42px;
   position: relative;
@@ -1072,6 +1089,7 @@ svg {
 }
 
 .faq__button {
+  padding: 32px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1096,7 +1114,9 @@ svg {
 
 .faq__text {
   padding-top: 12px;
-  padding-right: 85px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-top: -33px;
 }
 
 .main-slider__container {
@@ -1344,7 +1364,21 @@ svg {
   margin: 0;
 }
 
+@media (min-width: 320.98px) {
+  .intro__text {
+    margin-bottom: 100px;
+  }
+}
+
 @media (min-width: 600.98px) {
+  .menu__button {
+    margin-right: 24px;
+  }
+
+  .menu__button:last-child {
+    margin: 0;
+  }
+
   .footer__body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1571,6 +1605,14 @@ svg {
     margin: 0;
   }
 
+  .menu__link {
+    opacity: 0.72;
+  }
+
+  .menu__link {
+    padding-bottom: 10px;
+  }
+
   .menu__link.active svg {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -1587,7 +1629,7 @@ svg {
   .submenu {
     padding: 20px;
     position: absolute;
-    top: calc(100% + 10px);
+    top: 100%;
     left: 0;
     width: auto;
     height: auto;
@@ -1638,8 +1680,8 @@ svg {
 
   .intro__image_first {
     top: 50%;
-    -webkit-transform: translate(170%, -60%);
-    transform: translate(170%, -60%);
+    -webkit-transform: translate(170%, -72%);
+    transform: translate(170%, -72%);
   }
 
   .intro__image_second img {
@@ -1649,7 +1691,7 @@ svg {
 
   .intro__image_third {
     bottom: 0;
-    right: 0;
+    right: 24px;
   }
 
   .intro__image_third img {
@@ -1705,6 +1747,14 @@ svg {
     width: 2px;
     height: 100%;
     background: linear-gradient(90.59deg, #3FEBFF 0.19%, #C600D3 50.02%, #FF1563 99.85%);
+  }
+
+  .faq__text {
+    padding-bottom: 32px;
+  }
+
+  .main-slider {
+    margin-bottom: 28px;
   }
 
   .slide-main-slider__content {
@@ -1783,6 +1833,10 @@ svg {
     width: 100%;
     height: auto;
     z-index: 50;
+  }
+
+  .header.active {
+    background: #fff;
   }
 
   .header__container {
@@ -2005,6 +2059,15 @@ svg {
     margin-bottom: 40px;
   }
 
+  .faq__button {
+    padding: 16px;
+  }
+
+  .faq__text {
+    padding: 0 16px 16px;
+    margin-top: -5px;
+  }
+
   .main-slider__container::before {
     top: 140px;
     background: linear-gradient(135.59deg, #3FEBFF 0.19%, #C600D3 50.02%, #FF1563 99.85%);
@@ -2090,6 +2153,10 @@ svg {
     border-top-left-radius: 34px;
   }
 
+  .intro__body {
+    margin: 0 -24px;
+  }
+
   .intro__content {
     border-radius: 28px;
     max-width: 100%;
@@ -2097,7 +2164,7 @@ svg {
   }
 
   .intro__image_first {
-    top: 60%;
+    top: 63%;
     left: -30px;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
@@ -2109,7 +2176,7 @@ svg {
   }
 
   .intro__image_second {
-    top: 65%;
+    top: 67%;
     right: -15px;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
@@ -2307,10 +2374,6 @@ svg {
     margin-bottom: 50px;
   }
 
-  .intro__body {
-    margin: 0 -24px;
-  }
-
   .intro__title {
     font-size: 32px;
     line-height: 112.5%;
@@ -2401,11 +2464,6 @@ svg {
     -ms-flex: 0 0 30px;
     flex: 0 0 30px;
     height: 30px;
-  }
-
-  .faq__text {
-    padding-top: 16px;
-    padding-right: 64px;
   }
 
   .main-slider__container::before {
@@ -2564,6 +2622,10 @@ svg {
 }
 
 @media (min-width: 767.98px) and (max-width: 1279.98px) {
+  .intro__body {
+    padding: 64px;
+  }
+
   .intro__image_first {
     bottom: 50px;
     left: -10px;
@@ -2571,7 +2633,7 @@ svg {
 
   .intro__image_second {
     bottom: 180px;
-    left: 65%;
+    left: 67%;
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
   }
