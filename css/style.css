@@ -899,7 +899,7 @@ svg {
 .products__button-prev svg,
 .products__button-next svg {
   width: 25px;
-  height: 6px;
+  height: 9px;
 }
 
 .products__button-prev {
@@ -916,7 +916,6 @@ svg {
 
 .slide-products__image {
   overflow: hidden;
-  border-radius: 16px;
   background: rgba(27, 27, 27, 0.04);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -979,6 +978,10 @@ svg {
   width: 100%;
   max-width: 173px;
   height: auto;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .support__video {
@@ -1021,9 +1024,15 @@ svg {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
 }
 
 .support__button svg {
+  position: absolute;
+  top: 51%;
+  left: 53%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 21px;
   height: 24px;
   fill: #fff;
@@ -1191,6 +1200,7 @@ svg {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding-top: 72px;
+  padding-left: 72px;
 }
 
 .slide-main-slider__title {
@@ -1282,12 +1292,12 @@ svg {
   margin-bottom: 24px;
 }
 
-.item-about-advantages__text {
+.item-about-advantages__text p {
   margin-bottom: 32px;
   line-height: 150%;
 }
 
-.item-about-advantages__text:last-child {
+.item-about-advantages__text p:last-child {
   margin: 0;
 }
 
@@ -1331,6 +1341,15 @@ svg {
 
 .download__title {
   margin-bottom: 56px;
+}
+
+.download__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .download__image img {
@@ -1538,9 +1557,6 @@ svg {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1759,6 +1775,7 @@ svg {
 
   .slide-main-slider__content {
     padding-right: 32px;
+    padding-left: 72px;
   }
 
   .slide-main-slider__image {
@@ -2075,6 +2092,10 @@ svg {
 
   .main-slider__body {
     padding: 0 30px;
+  }
+
+  .slide-main-slider__content {
+    padding-left: 32px !important;
   }
 
   .slide-main-slider__image {
@@ -2472,6 +2493,7 @@ svg {
 
   .main-slider__slide {
     padding-bottom: 10px;
+    padding-left: 32px;
   }
 
   .main-slider__pagination {
@@ -2676,5 +2698,10 @@ svg {
 
   .slide-products:hover .slide-products__text {
     opacity: 1;
+  }
+
+  .brands__item img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
   }
 }

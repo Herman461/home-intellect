@@ -352,9 +352,10 @@ if (spoilersArray.length > 0) {
 }
 
 if (document.querySelector('.products__slider')) {
+  var loop = document.querySelector('.products__slider').dataset.sliderLoop;
   var productsSlider = new Swiper('.products__slider', {
     speed: 800,
-    loop: true,
+    loop: loop === 'on',
     spaceBetween: 40,
     slidesPerView: 1.5,
     navigation: {
@@ -376,10 +377,18 @@ if (document.querySelector('.products__slider')) {
 
 if (document.querySelector('.main-slider__slider')) {
   var mainSlider = new Swiper('.main-slider__slider', {
+    autoplay: {
+      delay: 2000
+    },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true
+    },
     speed: 800,
     spaceBetween: 30,
     pagination: {
-      el: ".main-slider__pagination"
+      el: ".main-slider__pagination",
+      clickable: true
     },
     on: {
       init: function init() {
